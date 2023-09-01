@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+body {
+	background-image: url('images/tree.jpg'); /*path to your image file*/
+	background-size: cover;
+	font-family: 'Montserrat', sans-serif;
+}
+
+header {
+	height: 100px;
+	width: 900px;
+	margin-bottom: 20px;
+	
+}
+
+nav {
+	width: 900px;
+	margin-bottom: 10px;
+}
+
+#content1 {
+	width: 410px;
+	float: left;
+	height: 450px;
+	background-color:rgba(255, 255, 255,0.7);
+	border-radius: 15px;
+	margin-right: 5px;
+	padding: 15px;
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+#content2 {
+	width: 410px;
+	float: right;
+	height: 450px;
+	background-color: hsla(0, 0%, 100%, 0.5);
+	border-radius: 15px;
+	text-align: center;
+	padding: 15px;
+}
+
+#wrapper {
+	width: 900px;
+	margin: 0 auto;
+}
+
+#gradientColor {
+	background: linear-gradient(rgb(0, 255, 42),rgb(192, 24, 24));
+	height: 50px;
+}
+
+h1 {
+	text-shadow: 10px 10px 0px rgb(153, 153, 153);
+}
+
+#colstyle {
+	column-count: 2;
+	column-rule: 1px solid #a7a7a7;
+	column-gap: 10px;
+}
+
+/*navigation menu*/
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333;
+}
+
+li {
+	float: left;
+}
+
+li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+li a:hover {
+	background-color: #109a55;
+}
+
+/* Animation */
+#logo {
+	animation: moving_logo 5s linear infinite;
+}
+@keyframes moving_logo {
+	from {transform: rotate(0deg);}
+	to {transform:rotate(360deg);}
+}

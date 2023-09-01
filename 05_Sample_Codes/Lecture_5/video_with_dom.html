@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Audio and Video</title>
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap');
+	body {
+		font-family: 'Inconsolata', monospace;
+	}
+	
+	#container {
+		width: 600px;
+		margin: 0 auto;
+	}
+	div {
+		margin-bottom: 10px;
+	}
+</style>
+</head>
+
+<body>
+<div id="container">	
+	<div>
+		<h1>Video</h1>
+		<button onclick="playPause()">Play/Pause</button> 
+		<button onclick="makeBig()">Big</button>
+		<button onclick="makeSmall()">Small</button>
+		<button onclick="makeNormal()">Normal</button>
+	</div>
+	<div>
+		<video id="video1" width="420">
+			<source src="files/sample_video.ogg" type="video/ogg">
+			<source src="files/sample_video.mp4" type="video/mp4">
+		</video>
+	</div>
+</div>
+	<script>
+		var myVideo = document.getElementById("video1"); 
+
+		function playPause() { 
+		  if (myVideo.paused) 
+			myVideo.play(); 
+		  else 
+			myVideo.pause(); 
+		} 
+
+		function makeBig() { 
+			myVideo.width = 560; 
+		} 
+
+		function makeSmall() { 
+			myVideo.width = 320; 
+		} 
+
+		function makeNormal() { 
+			myVideo.width = 420; 
+		} 
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Geolocation</title>
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap');
+	body {
+		font-family: 'Inconsolata', monospace;
+	}
+</style>
+</head>
+
+<body onload="getLocation()">
+	<p id="geolocation"></p>
+	<script>
+		var x = document.getElementById("geolocation");
+		function getLocation() {    
+			if (navigator.geolocation) {        
+				navigator.geolocation.getCurrentPosition(showPosition);    
+			} else {        
+				x.innerHTML = "Geolocation is not supported by this browser.";    
+			}
+		}
+		
+		function showPosition(position) {    
+			x.innerHTML = "<h3>Latitude: " + position.coords.latitude +     
+			"</h3><h3>Longitude: " + position.coords.longitude + "</h3>"; 
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+            body {
+                font-family: 'Open Sans', sans-serif;
+            }
+            div {
+                margin-bottom: 15px;
+            }
+        </style>
+        <script>
+            function checkEmail() {
+                var email_input1 = document.getElementById("emailadd1");
+                var email_input2 = document.getElementById("emailadd2");
+                
+                if (email_input1.value != email_input2.value) {
+                    email_input2.setCustomValidity("Email not matched!");
+                    return false;
+                }
+                else {
+                // input is valid -- reset the error message
+                input.setCustomValidity('');
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form action="" method="POST" onsubmit="return checkEmail()">
+            <div>
+                <label>Email: </label><br>
+                <input type="email" name="emailadd1" id="emailadd1" required>
+            </div>
+            <div>
+                <label>Confirm Email: </label><br>
+                <input type="email" name="emailadd2" id="emailadd2" required>
+            </div>
+            <div>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </body>
+</html>

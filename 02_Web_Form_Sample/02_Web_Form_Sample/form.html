@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+            body {
+                font-family: 'Open Sans', sans-serif;
+            }
+            div {
+                margin-bottom: 15px;
+            }
+        </style>
+        <script>
+            if (document.createElement("input").webkitSpeech === undefined) {
+	            alert("Speech input is not supported in your browser.");
+            }
+        </script>
+    </head>
+    <body>
+        <form action="" method="POST">
+            <div>
+                <label>Title: </label><br>
+                <input type="text" name="" required>
+            </div>
+            <div>
+                <label>Name: </label><br>
+                <input type="text" name="" required>
+            </div>
+            <div>
+                <label>Email: </label><br>
+                <input type="email" name="" placeholder="xxx@xxx.xxx" required>
+            </div>
+            <div>
+                <label>Phone: </label><br>
+                <input type="tel" name="" required>
+            </div>
+            <div>
+                <label>URL: </label><br>
+                <input type="url" placeholder="http://" name="" required>
+            </div>
+            <div>
+                <label>Check in date: </label><br>
+                <input type="date" name="" required>
+            </div>
+            <div>
+                <label>Number of Nights: </label><br>
+                <input type="number" name="" required>
+            </div>
+            <div>
+                <label>Number of pax: </label><br>
+                1 <input type="range" min="1" max="10" required> 10
+            </div>
+            <div>
+                <label>Color on Welcome Card: </label><br>
+                <input type="color" name="" required>
+            </div>
+            <div>
+                <label>Any messages? </label><br>
+                <input type="text" x-webkit-speech="x-webkit-speech" >
+            </div>
+            <div>
+                <label>Password? </label><br>
+                <input type="password" name="pwd" pattern=".{8,}" title="Eight or more characters">
+            </div>
+            <div>
+                <label>Form Completion Status: </label><br>
+                <progress id="file" value="32" max="100"> 32% </progress>
+            </div>
+            <div>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </body>
+</html>

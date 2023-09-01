@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+            body {
+                font-family: 'Open Sans', sans-serif;
+            }
+            div {
+                margin-bottom: 15px;
+            }
+
+            input {
+                width: 200px;
+            }
+
+            input[type='text']:focus:valid {
+                background: #D2F587;
+            }
+
+            input[type='number']:in-range {
+                border-color: green;
+            }
+
+            input[type='text']:focus:invalid {
+                background: #F5BFD1;
+            }
+
+            input[type='number']:out-of-range {
+                border-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="" method="POST" onsubmit="return checkEmail()">
+            <div>
+                <label>Name: </label><br>
+                <input type="text" name="user_name" placeholder="Enter name" required>
+            </div>
+            <div>
+                <label>Number: </label><br>
+                <input type="number" name="fav_number" placeholder="Between 1 and 20" min="1" max="20" required>
+            </div>
+            <div>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </body>
+</html>

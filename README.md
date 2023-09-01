@@ -1,1 +1,1 @@
-Added Materials.
+FWDD lecture materials store in this repository.
